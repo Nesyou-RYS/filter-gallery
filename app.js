@@ -36,21 +36,3 @@ fiterContainer.addEventListener("click", (event) => {
         });
     }
 });
-
-// fiterContainer.addEventListener("click", (event) => {
-//     if (event.target.classList.contains("filter-item")) {
-//         fiterContainer.querySelector(".active").classList.remove("active");
-//         event.target.classList.add("active");
-//         const filterValue = event.target.getAttribute("data-filter");
-//         galleryItems.forEach((item) => {
-//             if (item.classList.contains(filterValue) || filterValue === 'all') {
-//                 item.classList.add("show");
-//                 item.classList.remove("hide");
-//             } else {
-//                 item.classList.add("hide");
-//                 item.classList.remove("show");
-//             }
-//         });
-//     }
-// }); }
-// });

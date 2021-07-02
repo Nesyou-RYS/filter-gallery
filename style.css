@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+.contaienr {
+    max-width: 98%;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: wrap;
+    height: 270px;
+    border-radius: 5px;
+    box-shadow: -2px 0px 12px -2px #000000;
+}
+
+.gallery {
+    width: 100%;
+    display: block;
+    min-height: 100vh;
+    background-color: #444444;
+    padding: 50px 0;
+}
+
+.gallery-blur {
+    filter: blur(1px);
+}
+
+.gallery .gallery-filter {
+    padding: 0 15px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery .gallery-filter .filter-item {
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    line-height: 1.2;
+    transition: all .3s ease;
+}
+
+.gallery .gallery-filter .filter-item.active {
+    color: #FFC947;
+    border-color: #FFC947;
+}
+
+.gallery .gallery-item {
+    width: calc(100% / 3);
+    padding: 5px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.gallery .gallery-item-inner img {
+    width: 100%;
+}
+
+.gallery .gallery-item.show {
+    animation: fadeIn .5sease;
+}
+
+.gallery .gallery-item.hide {
+    display: none;
+}
+
+@media(max-width:991px) {
+    .gallery .gallery-item {
+        width: 50%;
+    }
+}
+
+@media(max-width:767px) {
+    .gallery .gallery-item {
+        width: 100%;
+    }
+}
+
+.preview {
+    direction: rtl;
+    display: none;
+    width: 70%;
+    height: auto;
+    position: fixed;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -30%);
+    transform: .5s;
+    box-shadow: -2px 0px 12px -2px #000000;
+}
+
+.preview-header {
+    background-color: #1B1717;
+    width: 100%;
+    color: #fff;
+    z-index: 10;
+}
+
+.preview-header i {
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: lighter;
+    transition: 0.5s;
+}
+
+.preview-header i:hover {
+    background-color: #CE1212;
+}
+
+.preview-image {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+.preview-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 5px 5px;
+}
